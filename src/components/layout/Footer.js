@@ -15,9 +15,9 @@ const Footer = () => {
       <div className="three wide column">
         <h5>Follow Us</h5>
         <div className="social-media-icons">
-          <i class="instagram icon"></i>
-          <i class="youtube icon"></i>
-          <i class="facebook f icon"></i>
+          <i className="instagram icon"></i>
+          <i className="youtube icon"></i>
+          <i className="facebook f icon"></i>
         </div>
       </div>
       <div className="four wide column">

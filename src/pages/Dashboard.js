@@ -14,15 +14,15 @@ import carouselImage from "../assets/images/home_image.png";
 
 const Dashboard = () => {
   return (
-    <div className="dashboard">
+    <div className="dashboard" style={{ paddingBottom: "6em" }}>
       <CarouselProvider
-        naturalSlideWidth={80}
-        naturalSlideHeight={30}
+        naturalSlideWidth={100}
+        naturalSlideHeight={45}
         totalSlides={3}
       >
         <Slider>
           <Slide index={0}>
-            <Image src={carouselImage} />
+            <Image src={carouselImage} style={{ maxWidth: "1284px" }} />
           </Slide>
           {/* <Slide index={1}>I am the second Slide.</Slide>
           <Slide index={2}>I am the third Slide.</Slide> */}

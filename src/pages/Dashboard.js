@@ -14,7 +14,10 @@ import carouselImage from "../assets/images/home_image.png";
 
 const Dashboard = () => {
   return (
-    <div className="dashboard" style={{ paddingBottom: "6em" }}>
+    <div
+      className="dashboard"
+      style={{ paddingTop: "1em", paddingBottom: "3em" }}
+    >
       <CarouselProvider
         naturalSlideWidth={100}
         naturalSlideHeight={45}

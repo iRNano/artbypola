@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import {
   CarouselProvider,
   Slider,
@@ -13,7 +13,26 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 import eleanor from "../assets/images/shopitems/Eleanor.png";
 
+
 const PortraitGallery = ({ photo }) => {
+  const [isImageError,setIsImageError] = useState(false)
+  const {url, name, price, gallery} = photo;
+
+  const renderGallery = gallery.map((url,index) => {
+    return (
+      <Dot slide={index} key={index}>
+        {!isImageError ? <Image onError={setIsImageError(true)} isBgImage="true" src={url} style={{ maxWidth: "100px" }} /> : <img src={url} style={{ maxWidth: "80px" }}></img>}
+      </Dot>
+    )
+})
+  
+const renderSlides = gallery.map((url,index) => {
+    return(
+      <Slide index={index} key={index}>
+        {!isImageError ? <Image onError={setIsImageError(true)} isBgImage="true" src={url}  /> : <img src={url} ></img>}
+      </Slide>
+    )
+})
   return (
     <div className="portrait-gallery">
       <CarouselProvider
@@ -26,30 +45,13 @@ const PortraitGallery = ({ photo }) => {
           style={{ display: "flex", minHeight: "50vh" }}
         >
           <div className="row">
-            <div className="dots six wide column" style={{ display: "block" }}>
-              <div className="ui vertical button">
-                <button className="ui button">
-                  <Dot slide={0}>
-                    <Image src={eleanor} style={{ maxWidth: "50px" }} />
-                  </Dot>
-                </button>
-                <button className="ui button">
-                  <Dot slide={1}>
-                    <Image src={eleanor} style={{ maxWidth: "50px" }} />
-                  </Dot>
-                </button>
-              </div>
+            
+            <div className="dots four wide column center" style={{ display: "block" }}>
+              {gallery? renderGallery : ''}
             </div>
-            <div className="slider ten wide column">
+            <div className="slider twelve wide column">
               <Slider>
-                <Slide index={0}>
-                  1
-                  <Image src={eleanor} />
-                </Slide>
-                <Slide index={1}>
-                  2
-                  <Image src={eleanor} />
-                </Slide>
+                {gallery? renderSlides : ''}  
               </Slider>
             </div>
           </div>

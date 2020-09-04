@@ -13,6 +13,9 @@ import lucy from "./assets/images/shopitems/Lucy.png";
 import maggie from "./assets/images/shopitems/Maggie.png";
 import prudence from "./assets/images/shopitems/Prudence.png";
 import sadie from "./assets/images/shopitems/Sadie.png";
+import ele_g1 from "./assets/images/shopitems/Eleanor_gallery/Eleanor.png"
+import ele_g2 from "./assets/images/shopitems/Eleanor_gallery/Eleanor_Mockup_1.png"
+import ele_g3 from "./assets/images/shopitems/Eleanor_gallery/Eleanor_Mockup_2.png"
 
 function App() {
   const photos = [
@@ -21,36 +24,42 @@ function App() {
       url: eleanor,
       name: "Eleanor",
       price: "3,500.00",
+      gallery: [ele_g1,ele_g2,ele_g3]
     },
     {
       _id: 2,
       url: lizzy,
       name: "Lizzy",
       price: "3,500.00",
+      gallery: [ele_g1,ele_g2,ele_g3]
     },
     {
       _id: 3,
       url: lucy,
       name: "Lucy",
       price: "3,500.00",
+      gallery: [ele_g1,ele_g2,ele_g3]
     },
     {
       _id: 4,
       url: maggie,
       name: "Maggie",
       price: "3,500.00",
+      gallery: [ele_g1,ele_g2,ele_g3]
     },
     {
       _id: 5,
       url: prudence,
       name: "Prudence",
       price: "3,500.00",
+      gallery: [ele_g1,ele_g2,ele_g3]
     },
     {
       _id: 6,
       url: sadie,
       name: "Sadie",
       price: "3,500.00",
+      gallery: [ele_g1,ele_g2,ele_g3]
     },
   ];
 

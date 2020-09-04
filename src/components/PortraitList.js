@@ -3,6 +3,7 @@ import Portrait from "../components/Portrait";
 import { Link } from "react-router-dom";
 
 const PortraitList = ({ photos }) => {
+  console.log(photos)
   const portraitClickHandler = (id) => {
     alert("test");
     console.log("test");

@@ -25,7 +25,7 @@ const PortraitDescription = ({ photos }) => {
       )
 
     setSameCollection(otherPortraits);
-  }, []);
+  }, [_id]);
   
   return (
     <div className="portrait-description">

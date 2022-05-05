@@ -1,5 +1,5 @@
 import React from "react";
-import Portrait from "../components/Portrait";
+import Portrait from "./Portrait";
 import { Link } from "react-router-dom";
 
 const PortraitList = ({ photos }) => {

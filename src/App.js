@@ -1,12 +1,13 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Routes } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Dashboard from "./pages/Dashboard";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
-import PortraitDescription from "./components/PortraitDescription";
+import Cart from "./pages/Cart";
+import PortraitDescription from "./components/Portrait/PortraitDescription";
 import eleanor from "./assets/images/shopitems/Eleanor.png";
 import lizzy from "./assets/images/shopitems/Lizzy.png";
 import lucy from "./assets/images/shopitems/Lucy.png";
@@ -68,23 +69,14 @@ function App() {
       <Router>
         <Header />
 
-        <Switch>
-          <Route exact path="/">
-            <Dashboard />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route exact path="/shop">
-            <Shop photos={photos} />
-          </Route>
-          <Route path="/shop/:_id">
-            <PortraitDescription photos={photos} />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<Dashboard />} />
+          <Route path="/about" element={ <About />} />
+          <Route exact path="/shop" element={<Shop photos={photos} />} />
+          <Route path="/shop/:_id" element={<PortraitDescription photos={photos} />}/>
+          <Route path="/contact" element={<Contact />}/>
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
 
         <Footer />
       </Router>

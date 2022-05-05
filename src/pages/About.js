@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Breadcrumb from "../components/shared/Breadcrumb";
-import PortraitList from "../components/PortraitList";
+import PortraitList from "../components/Portrait/PortraitList";
 import AboutDetails from "../components/AboutDetails";
 
 const About = () => {

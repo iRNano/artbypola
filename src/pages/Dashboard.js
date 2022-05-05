@@ -10,14 +10,18 @@ import {
   Image,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import styled from 'styled-components'
 import carouselImage from "../assets/images/home_image.png";
 
+
 const Dashboard = () => {
+
+  const StyledDashboard = styled.div`
+    padding-top: 1em;
+    padding-bottom: 3em;
+  `
   return (
-    <div
-      className="dashboard"
-      style={{ paddingTop: "1em", paddingBottom: "3em" }}
-    >
+    <StyledDashboard>
       <CarouselProvider
         naturalSlideWidth={100}
         naturalSlideHeight={45}
@@ -34,7 +38,7 @@ const Dashboard = () => {
         <Dot slide={1}>2</Dot>
         <Dot slide={2}>3</Dot> */}
       </CarouselProvider>
-    </div>
+    </StyledDashboard>
   );
 };
 

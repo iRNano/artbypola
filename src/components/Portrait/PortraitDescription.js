@@ -1,9 +1,9 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { useParams } from "react-router-dom";
-import Breadcrumb from "./shared/Breadcrumb";
+import Breadcrumb from "../shared/Breadcrumb";
 import PortraitGallery from "./PortraitGallery";
 import PortraitForm from './PortraitForm';
-import PortraitOtherCollections from "./shared/PortraitOtherCollections";
+import PortraitOtherCollections from "../shared/PortraitOtherCollections";
 import PortraitList from "./PortraitList";
 
 const PortraitDescription = ({ photos }) => {

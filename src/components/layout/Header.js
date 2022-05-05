@@ -1,11 +1,13 @@
 import React from "react";
+import {useNavigate} from 'react-router-dom'
 import Navbar from "./Navbar";
 import HeaderImage from "./HeaderImage";
 import HeaderCart from "./HeaderCart";
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <div className="ui container header">
-      <HeaderCart />
+      <HeaderCart onClick={()=>navigate('/cart')}/>
       <HeaderImage />
       <Navbar>
         <div name="HOME" link="/"></div>

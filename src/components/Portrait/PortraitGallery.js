@@ -11,7 +11,7 @@ import {
   Button,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import eleanor from "../assets/images/shopitems/Eleanor.png";
+import eleanor from "../../assets/images/shopitems/Eleanor.png";
 
 
 const PortraitGallery = ({ photo }) => {

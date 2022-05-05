@@ -63,6 +63,7 @@ const PortraitForm = ({photo}) => {
            {/* {errors.email && touched.email && errors.email} */}
            <div className="field">
                <label htmlFor="quantity">Quantity:</label>
+               <div style={{display:'flex'}}>
            <input
              type="number"
              name="quantity"
@@ -70,12 +71,14 @@ const PortraitForm = ({photo}) => {
              onBlur={handleBlur}
              value={values.password}
            />
-           </div>
-           
-           {errors.password && touched.password && errors.password}
            <button type="submit" disabled={isSubmitting}>
              ADD TO CART
            </button>
+           </div>
+           </div>
+           
+           {errors.password && touched.password && errors.password}
+           
          </form>
        )}
             </Formik>
